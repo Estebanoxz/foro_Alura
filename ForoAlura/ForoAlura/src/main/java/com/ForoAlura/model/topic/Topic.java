@@ -25,7 +25,4 @@ public class Topic {
     private String author;
 
     private String course;
-
-    public String getTitulo() {
-    }
 }
