@@ -1,6 +1,6 @@
 package com.ForoAlura.controller;
 
-import com.ForoAlura.model.topic.TopicService;
+import com.ForoAlura.Service.TopicService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

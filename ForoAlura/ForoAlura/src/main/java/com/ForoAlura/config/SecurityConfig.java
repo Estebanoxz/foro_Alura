@@ -39,7 +39,7 @@ public class SecurityConfig {
         return config.getAuthenticationManager();
     }
 
-    // ✅ Bean necesario para AuthService
+
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();

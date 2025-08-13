@@ -9,5 +9,5 @@ public class ForoAluraApplication {
     public static void main(String[] args) {
         SpringApplication.run(ForoAluraApplication.class, args);
     }
-
 }
+
