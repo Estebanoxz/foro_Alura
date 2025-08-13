@@ -27,5 +27,6 @@ public class Topic {
     private String course;
 
     public String getTitulo() {
+        return "";
     }
 }

@@ -1,9 +1,9 @@
 package com.foro.controller;
 
-import com.ForoAlura.Repository.TopicRepository;
-import com.ForoAlura.dto.TopicRequestDTO;
-import com.ForoAlura.dto.TopicResponseDTO;
-import com.ForoAlura.model.topic.Topic;
+import com.foroalura.dto.TopicRequestDTO;
+import com.foroalura.dto.TopicResponseDTO;
+import com.foroalura.model.Topic;
+import com.foroalura.repository.TopicRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
