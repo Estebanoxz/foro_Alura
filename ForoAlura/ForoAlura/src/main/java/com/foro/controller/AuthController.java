@@ -3,6 +3,7 @@ package com.foro.controller;
 
 import com.ForoAlura.Service.AuthService;
 import com.ForoAlura.dto.AuthRequestDTO;
+import com.ForoAlura.dto.AuthResponseDTO;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
