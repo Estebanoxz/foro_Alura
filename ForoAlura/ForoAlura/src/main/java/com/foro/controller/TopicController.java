@@ -1,4 +1,4 @@
-package com.ForoAlura.controller;
+package com.foro.controller;
 
 import com.ForoAlura.dto.TopicRequestDTO;
 import com.ForoAlura.dto.TopicResponseDTO;
