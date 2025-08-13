@@ -5,7 +5,7 @@ public class TopicResponseDTO {
     private String titulo;
     private String contenido;
 
-    public TopicResponseDTO() {
+    public TopicResponseDTO(Long id, String title, String message, String author, String course) {
     }
 
     public TopicResponseDTO(Long id, String titulo, String contenido) {

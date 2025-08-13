@@ -2,6 +2,7 @@ package com.ForoAlura.Service;
 
 import com.ForoAlura.Repository.UserRepository;
 import com.ForoAlura.dto.AuthRequestDTO;
+import com.ForoAlura.dto.AuthResponseDTO;
 import com.ForoAlura.model.User;
 import com.ForoAlura.security.JwtUtil;
 import org.springframework.security.crypto.password.PasswordEncoder;
