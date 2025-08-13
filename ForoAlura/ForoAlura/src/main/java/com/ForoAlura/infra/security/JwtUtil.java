@@ -1,4 +1,4 @@
-package com.ForoAlura.security;
+package com.ForoAlura.infra.security;
 
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;

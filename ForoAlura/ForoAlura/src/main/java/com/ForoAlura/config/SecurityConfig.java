@@ -1,6 +1,6 @@
 package com.ForoAlura.config;
 
-import com.ForoAlura.security.JwtFilter;
+import com.ForoAlura.infra.security.JwtFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;

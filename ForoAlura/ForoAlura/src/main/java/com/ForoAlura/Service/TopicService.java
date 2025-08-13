@@ -18,13 +18,13 @@ public class TopicService {
         this.topicRepository = topicRepository;
     }
 
+
     public TopicResponseDTO createTopic(TopicRequestDTO request) {
-        Topic topic = Topic.builder()
-                .title(request.getTitle())
-                .message(request.getMessage())
-                .author(request.getAuthor())
-                .course(request.getCourse())
-                .build();
+        Topic topic = new Topic();
+        topic.setTitle(request.getTitle());
+        topic.setMessage(request.getMessage());
+        topic.setAuthor(request.getAuthor());
+        topic.setCourse(request.getCourse());
 
         Topic savedTopic = topicRepository.save(topic);
 
@@ -38,7 +38,8 @@ public class TopicService {
     }
 
     public List<TopicResponseDTO> getAllTopics() {
-        return topicRepository.findAll().stream()
+        return topicRepository.findAll()
+                .stream()
                 .map(t -> new TopicResponseDTO(
                         t.getId(),
                         t.getTitle(),
@@ -47,5 +48,10 @@ public class TopicService {
                         t.getCourse()
                 ))
                 .collect(Collectors.toList());
+    }
+
+
+    public void deleteTopic(Long id) {
+        topicRepository.deleteById(id);
     }
 }

@@ -6,16 +6,15 @@ package com.ForoAlura.dto;
         private String username;
         private String password;
 
-        // Constructor vacío (necesario para Spring)
+
         public RegisterRequestDTO() {}
 
-        // Constructor con parámetros
+
         public RegisterRequestDTO(String username, String password) {
             this.username = username;
             this.password = password;
         }
 
-        // Getters y setters
         public String getUsername() {
             return username;
         }

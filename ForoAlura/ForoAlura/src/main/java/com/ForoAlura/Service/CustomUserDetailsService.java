@@ -1,7 +1,7 @@
 package com.ForoAlura.Service;
 
 
-    import com.ForoAlura.Repository.UserRepository;
+import com.ForoAlura.Repository.UserRepository;
 import com.ForoAlura.model.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

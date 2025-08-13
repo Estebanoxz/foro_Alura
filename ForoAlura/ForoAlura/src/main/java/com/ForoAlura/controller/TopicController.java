@@ -1,4 +1,3 @@
-// TopicController.java
 package com.ForoAlura.controller;
 
 import com.ForoAlura.Service.TopicService;
@@ -19,15 +18,23 @@ public class TopicController {
         this.topicService = topicService;
     }
 
+
     @PostMapping
     public ResponseEntity<TopicResponseDTO> createTopic(@RequestBody TopicRequestDTO request) {
-        TopicResponseDTO newTopic = topicService.createTopic(request);
-        return ResponseEntity.ok(newTopic);
+        TopicResponseDTO topic = topicService.createTopic(request);
+        return ResponseEntity.ok(topic);
     }
+
 
     @GetMapping
     public ResponseEntity<List<TopicResponseDTO>> getAllTopics() {
-        List<TopicResponseDTO> topics = topicService.getAllTopics();
-        return ResponseEntity.ok(topics);
+        return ResponseEntity.ok(topicService.getAllTopics());
+    }
+
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteTopic(@PathVariable Long id) {
+        topicService.deleteTopic(id);
+        return ResponseEntity.noContent().build();
     }
 }

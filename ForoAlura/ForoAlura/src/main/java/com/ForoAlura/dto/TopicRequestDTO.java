@@ -1,4 +1,3 @@
-// TopicRequestDTO.java
 package com.ForoAlura.dto;
 
 import lombok.Data;
