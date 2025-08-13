@@ -1,14 +1,40 @@
-package com.ForoAlura.dto;
+package com.ForoAlura.dto; // Asegúrate de que coincida con la carpeta real
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-
-@Data
-@AllArgsConstructor
 public class TopicResponseDTO {
     private Long id;
-    private String title;
-    private String message;
-    private String author;
-    private String course;
+    private String titulo;
+    private String contenido;
+
+    public TopicResponseDTO() {
+    }
+
+    public TopicResponseDTO(Long id, String titulo, String contenido) {
+        this.id = id;
+        this.titulo = titulo;
+        this.contenido = contenido;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getContenido() {
+        return contenido;
+    }
+
+    public void setContenido(String contenido) {
+        this.contenido = contenido;
+    }
 }
