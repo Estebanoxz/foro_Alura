@@ -3,6 +3,8 @@ package com.ForoAlura.Service;
 import com.ForoAlura.Repository.UserRepository;
 import com.ForoAlura.dto.AuthRequestDTO;
 import com.ForoAlura.dto.AuthResponseDTO;
+
+import com.ForoAlura.dto.RegisterRequestDTO;
 import com.ForoAlura.model.User;
 import com.ForoAlura.security.JwtUtil;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -21,6 +23,15 @@ public class AuthService {
         this.passwordEncoder = passwordEncoder;
     }
 
+    // Registro de usuario
+    public void register(RegisterRequestDTO dto) {
+        User user = new User();
+        user.setUsername(dto.getUsername());
+        user.setPassword(passwordEncoder.encode(dto.getPassword())); // ✅ Contraseña codificada
+        userRepository.save(user);
+    }
+
+    // Login
     public AuthResponseDTO login(AuthRequestDTO request) {
         User user = userRepository.findByUsername(request.getUsername())
                 .orElseThrow(() -> new RuntimeException("Usuario no encontrado"));

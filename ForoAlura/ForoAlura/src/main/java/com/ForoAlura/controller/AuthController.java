@@ -1,4 +1,4 @@
-package com.foro.controller;
+package com.ForoAlura.controller;
 
 
 import com.ForoAlura.Service.AuthService;
