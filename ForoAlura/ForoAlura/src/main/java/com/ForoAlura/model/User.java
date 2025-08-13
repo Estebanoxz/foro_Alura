@@ -1,25 +1,22 @@
 package com.ForoAlura.model;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
-import org.hibernate.annotations.Fetch;
-
-import java.util.Set;
+import lombok.*;
 
 @Entity
-@Getter @Setter
-@Table(name="users")
+@Table(name = "users")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(unique = true, nullable = false)
     private String username;
 
+    @Column(nullable = false)
     private String password;
-
-
-
-
 }

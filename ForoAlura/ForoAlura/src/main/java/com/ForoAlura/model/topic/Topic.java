@@ -1,40 +1,31 @@
 package com.ForoAlura.model.topic;
 
+import jakarta.persistence.*;
+import lombok.*;
+
+@Entity
+@Table(name = "topics")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Topic {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String titulo;
-    private String contenido;
 
-    public Topic() {
-    }
+    @Column(nullable = false)
+    private String title;
 
-    public Topic(Long id, String titulo, String contenido) {
-        this.id = id;
-        this.titulo = titulo;
-        this.contenido = contenido;
-    }
+    @Column(nullable = false)
+    private String message;
 
-    public Long getId() {
-        return id;
-    }
+    @Column(nullable = false)
+    private String author;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+    private String course;
 
     public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public String getContenido() {
-        return contenido;
-    }
-
-    public void setContenido(String contenido) {
-        this.contenido = contenido;
     }
 }
