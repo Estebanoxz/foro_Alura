@@ -1,11 +1,9 @@
 package com.ForoAlura.dto;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
-@Getter @Setter
+@Data
 public class AuthRequestDTO {
     private String username;
-    private String pasword;
-
+    private String password;
 }
