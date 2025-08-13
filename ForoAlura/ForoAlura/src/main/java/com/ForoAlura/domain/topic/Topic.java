@@ -1,4 +1,4 @@
-package com.foro.model;
+package com.ForoAlura.domain.topic;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
