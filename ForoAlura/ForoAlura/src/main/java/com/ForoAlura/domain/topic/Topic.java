@@ -1,5 +1,6 @@
 package com.ForoAlura.domain.topic;
 
+import com.ForoAlura.model.User;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
